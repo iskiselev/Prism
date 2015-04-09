@@ -56,7 +56,7 @@ namespace Prism.Commands
             if (executeMethod == null || canExecuteMethod == null)
                 throw new ArgumentNullException("executeMethod", Resources.DelegateCommandDelegatesCannotBeNull);
 
-            TypeInfo genericTypeInfo = typeof(T).GetTypeInfo();
+            var genericTypeInfo = typeof(T).GetTypeInfo();
 
             // DelegateCommand allows object or Nullable<>.  
             // note: Nullable<> is a struct so we cannot use a class constraint.

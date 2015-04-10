@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e95e429c-806e-4a19-8800-6676ccd9df26</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Prism</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Events\PubSubEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CompositeCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DelegateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DelegateCommandBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\WeakEventHandlerManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\BackgroundEventSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\DataEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\DelegateReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\DispatcherEventSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\EventAggregator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\EventBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\EventSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\IDelegateReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\IEventAggregator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\IEventSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\SubscriptionToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\ThreadOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IActiveAware.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\EmptyLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\ILoggerFacade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\Priority.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\BindableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\ErrorsContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\PropertySupport.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\ViewModelLocationProvider.cs" />
+  </ItemGroup>
+</Project>

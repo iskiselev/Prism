@@ -34,7 +34,11 @@ namespace Prism.Events
         public override void InvokeAction(Action<TPayload> action, TPayload argument)
         {
             //ThreadPool.QueueUserWorkItem( (o) => action(argument) );
+#if SILVERLIGHT
+            TaskEx.Run(() => action(argument));
+#else
             Task.Run(() => action(argument));
+#endif
         }
     }
 }

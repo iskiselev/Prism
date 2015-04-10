@@ -46,7 +46,11 @@ namespace Prism.Mvvm
                 throw new ArgumentException(Resources.PropertySupport_ExpressionNotProperty_Exception, "propertyExpression");
             }
 
+#if SILVERLIGHT
+            var getMethod = property.GetGetMethod();
+#else
             var getMethod = property.GetMethod;
+#endif
             if (getMethod.IsStatic)
             {
                 throw new ArgumentException(Resources.PropertySupport_StaticExpression_Exception, "propertyExpression");

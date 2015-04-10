@@ -31,7 +31,15 @@ namespace Prism.Commands
             if (executeMethod == null || canExecuteMethod == null)
                 throw new ArgumentNullException("executeMethod", Resources.DelegateCommandDelegatesCannotBeNull);
 
-            _executeMethod = (arg) => { executeMethod(arg); return Task.Delay(0); };
+            _executeMethod = (arg) =>
+            {
+                executeMethod(arg);
+#if SILVERLIGHT
+                return TaskEx.Delay(0);
+#else
+                return Task.Delay(0);
+#endif
+            };
             _canExecuteMethod = canExecuteMethod;
         }
 
